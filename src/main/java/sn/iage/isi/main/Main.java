@@ -8,8 +8,8 @@ import sn.iage.isi.repositories.CategoryRepository;
 public class Main {
     public static void main(String[] args) {
         CategoryRepository categoryRepository = new CategoryRepository();
-        for (Category category : categoryRepository.getAll()) {
-            System.out.println(category);
+        for (Category c : categoryRepository.search("nou")){
+            System.out.println(c);
         }
     }
 }
