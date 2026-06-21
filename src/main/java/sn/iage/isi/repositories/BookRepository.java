@@ -14,7 +14,7 @@ public class BookRepository {
     public Book createBook(Book book) {
         EntityTransaction tx = em.getTransaction();
         Book b = Book.builder()
-                .isbn((book.getIsbn() == null || book.getIsbn().isBlank()) ? generateIsbn() : book.getIsbn())
+                .isbn(generateIsbn())
                 .title(book.getTitle())
                 .author(book.getAuthor())
                 .publicationYear(book.getPublicationYear())
