@@ -33,7 +33,7 @@ public class BookRepository {
         return b;
     }
 
-    public List<Book> listAllBooks() {
+    public List<Book> ListAllBooks() {
         return em
                 .createQuery("SELECT b FROM Book b", Book.class)
                 .getResultList();
@@ -92,7 +92,7 @@ public class BookRepository {
         }
     }
 
-    public List<Book> listBooksByCategory(String categoryName) {
+    public List<Book> ListeBooksByCategory(String categoryName) {
         return em
                 .createQuery("SELECT b FROM Book b WHERE b.category.name = :categoryName", Book.class)
                 .setParameter("categoryName", categoryName)
@@ -159,7 +159,7 @@ public class BookRepository {
         int sum = 0;
         for (int i = 0; i < 12; i++) {
             int digit = Character.getNumericValue(base12.charAt(i));
-            sum += (i % 2 == 0) ? digit : digit * 3;   // alternance poids 1 et 3
+            sum += (i % 2 == 0) ? digit : digit * 3;
         }
         int remainder = sum % 10;
         return remainder == 0 ? 0 : 10 - remainder;
