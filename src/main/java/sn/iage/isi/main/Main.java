@@ -46,9 +46,9 @@ public class Main {
         Book updatedBook = bookRepository.updateBook(createdBook.getId(), newData);
         System.out.println("updateBook -> " + updatedBook);
 
-        // listBooksByCategory (probablement vide tant qu'on n'assigne pas de catégorie)
-        List<Book> booksInCategory = bookRepository.listBooksByCategory("Roman");
-        System.out.println("listBooksByCategory -> " + booksInCategory);
+        // ListeBooksByCategory (probablement vide tant qu'on n'assigne pas de catégorie)
+        List<Book> booksInCategory = bookRepository.ListeBooksByCategory("Roman");
+        System.out.println("ListeBooksByCategory -> " + booksInCategory);
 
         // searchBooksByTitle
         List<Book> byTitle = bookRepository.searchBooksByTitle("longue");
